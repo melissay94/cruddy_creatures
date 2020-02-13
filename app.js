@@ -3,6 +3,7 @@ const layouts = require("express-ejs-layouts");
 const methodOverride = require("method-override");
 
 const dinoRoutes = require("./routes/dinos");
+const cryptidRoutes = require("./routes/cryptids");
 
 
 const app = express();
@@ -16,5 +17,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/dinos", dinoRoutes);
+app.use ("/cryptids", cryptidRoutes);
 
 app.listen(3000, () => console.log("I took a trip to the port 3000!"));
