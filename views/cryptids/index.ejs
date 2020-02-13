@@ -1,11 +1,15 @@
-<h2>Show me...</h2>
+<h2 class="pre-header">Show me...</h2>
 <h1>DEM CRYPTIDS</h1>
+<div class="creature-parent">
 <% cryptids.forEach((cryptid, index) => { %>
-    <a href="/cryptids/<%= index %>">
-        Look at <%= cryptid.name %>
-    </a>
-    <img src="<%= cryptid.img_url %>" alt="<%= cryptid.name %> pic.">
-    <form method="POST" action="/cryptids/<%= index %>/?_method=DELETE">
-        <input type="submit" value="Delete" />
-    </form><br/>
+    <div class="creature-container">
+        <a href="/cryptids/<%= index %>" class="btn">
+            Look at <%= cryptid.name %>
+        </a>
+        <img src="<%= cryptid.img_url %>" alt="<%= cryptid.name %> pic.">
+        <form method="POST" action="/cryptids/<%= index %>/?_method=DELETE">
+            <input type="submit" value="Delete" class="btn"/>
+        </form><br/>
+    </div>
 <% }); %>
+</div>

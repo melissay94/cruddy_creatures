@@ -1,6 +1,8 @@
 <h2>Your Cryptid Close Up</h2>
-<p>
-    This is the <%= cryptid.name %>!
-    <a href="/cryptids/edit/<%= cryptid.id %>">Edit <%= cryptid.name %> Here!</a>
-</p>
-<img src="<%= cryptid.img_url %>" />
+<div class="creature-container">
+    <p>
+        This is the <%= cryptid.name %>!
+        <a href="/cryptids/edit/<%= cryptid.id %>" class="btn">Edit <%= cryptid.name %> Here!</a>
+    </p>
+    <img src="<%= cryptid.img_url %>" />
+</div>

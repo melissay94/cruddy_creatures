@@ -1,0 +1,88 @@
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: "Lacquer", sans-serif;
+    color: chartreuse;
+    font-size: 48px;
+    text-align: center;
+}
+
+form {
+    display: block;
+    text-align: center;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+}
+
+
+.site-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: chartreuse;
+}
+
+.site-nav a, .dino-container a{
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 28px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.site-nav a:hover {
+    background-color: limegreen;
+}
+
+.site-banner {
+    display: inline-block;
+    width: 100%;
+}
+
+.pre-header {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.creature-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.creature-container {
+    background-color: chartreuse;
+    margin: 12px 20px;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.creature-container img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    margin: 0 auto;
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 4px;
+    padding: 4px;
+    border: none;
+
+}
+
+.btn:hover {
+    background-color: #333333;
+}
