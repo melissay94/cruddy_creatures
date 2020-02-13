@@ -25,7 +25,6 @@ router.post("/", (req, res) => {
     dinos.push(req.body);
     // JSON strigify dinos
     let dinoString = JSON.stringify(dinos);
-    console.log(dinoString);
     // write dinos
     fs.writeFileSync("./dinosaurs.json", dinoString);
 
@@ -36,7 +35,6 @@ router.post("/", (req, res) => {
 // Show - GET route
 router.get("/:id", (req, res) => {
     let allDinos = JSON.parse(fs.readFileSync("./dinosaurs.json"));
-    console.log(allDinos);
     let dinoIndex = parseInt(req.params.id);
     let currentDino = allDinos[dinoIndex];
     currentDino.id = dinoIndex;
@@ -65,8 +63,8 @@ router.put("/:id", (req, res) => {
 // Destroy - DELETE
 router.delete("/:id", (req, res) => {
     let dinos = JSON.parse(fs.readFileSync("./dinosaurs.json"));
-    let deadDino = dinos.splice(req.params.id, 1);
-    console.log(deadDino);
+    
+    dinos.splice(req.params.id, 1);
     fs.writeFileSync("./dinosaurs.json", JSON.stringify(dinos));
 
     res.redirect("/dinos");
