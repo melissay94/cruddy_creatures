@@ -47,13 +47,15 @@ router.post("/", (req, res) => {
 
 // Update - PUT route
 router.put("/:id", (req, res) => {
+    console.log(req.params.id);
+
     let allCryptids = JSON.parse(fs.readFileSync(cryptidFilePath));
 
     allCryptids[req.params.id].name = req.body.name;
-    allCryptids[req.params.id].img_url = req.body.image_path;
+    allCryptids[req.params.id].img_url = req.body.img_url;
 
     fs.writeFileSync(cryptidFilePath, JSON.stringify(allCryptids));
-    res.redirect(`cryptids/${req.params.id}`);
+    res.redirect(`/cryptids/${req.params.id}`);
 });
 
 // Destroy - DELETE

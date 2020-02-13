@@ -18,5 +18,6 @@ app.get("/", (req, res) => {
 
 app.use("/dinos", dinoRoutes);
 app.use ("/cryptids", cryptidRoutes);
+app.use(express.static("static"));
 
 app.listen(3000, () => console.log("I took a trip to the port 3000!"));

@@ -68,6 +68,6 @@ router.delete("/:id", (req, res) => {
     fs.writeFileSync("./dinosaurs.json", JSON.stringify(dinos));
 
     res.redirect("/dinos");
-})
+});
 
 module.exports = router;
